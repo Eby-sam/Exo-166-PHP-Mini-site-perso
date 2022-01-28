@@ -8,39 +8,159 @@
 html {
 	font-size:62.5%;
 }
+
 body {
 	text-align: center;
 	font-family: Calibri, serif;
-	background: lightblue;
+	background: #edefef;
+	color: white;
 }
+
 header, footer {
 	margin: 0;
-	padding: 0;
-	background: cyan;
+	background-color: #34789C;
+	padding: 20px;
+	box-shadow: 10px 10px 10px grey;
 }
-footer {
-	position: absolute;
-	top: 750px;
-	width: 100%;
-}
+
 ul {
 	display: flex;
 	list-style-type: none;
 	justify-content: space-around;
 	align-items: center;
 }
+
 li {
 	margin-right: 18px;
 }
+
 a {
 	text-decoration: none;
+	color: white;
 }
+
 section, form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: grey;
 }
+h1{
+	font-size: 40px;
+}
+
 section h1 {
 	margin: 8px;
+	color: #505050;
+}
+
+input{
+	border-radius: 10px 10px;
+	border: 0.5px solid darkgray;
+	margin: 10px 0;
+	padding: 5px;
+	color: #29a5ee;
+}
+
+#containerContact{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#send{
+	background-color: #FFF000;
+	color: white;
+}
+
+.error, .success{
+	display: block;
+	background-color: indianred;
+	width: 100%;
+	padding: 15px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	top: 0;
+	margin: auto;
+	z-index: 100;
+	box-shadow: 5px 5px 5px darkslategrey;
+	font-size: 30px;
+}
+
+.success{
+	background-color: darkseagreen;
+}
+
+a:hover {
+	background-color: #D3D2D1;
+	padding: 5px 20px;
+	border-radius: 10px 10px;
+	color: #FFF000;
+}
+
+#webDeveloper, #imageBio{
+	width: 100%;
+}
+
+#titleHome, #homeDescription, #bio {
+	position: absolute;
+	top: 30%;
+	color: white;
+	font-size: 80px;
+}
+
+#bio {
+	top: 80%;
+	padding: 10px 10%;
+	background-color: #FFF000;
+	border: none;
+	border-radius: 10px 10px;
+}
+
+#homeDescription {
+	top: 60%;
+	color: #FFF000;
+	font-size: 70px;
+}
+
+form {
+	box-shadow: -2px -2px 8px 8px grey;
+	border: 0.5px solid darkgray;
+	align-items: flex-start;
+	padding: 30px  200px;
+	margin: 20px;
+	margin-bottom: 100px;
+	background-color: white;
+}
+
+#message {
+	width: 100%;
+	height: 200px;
+	color: #29a5ee;
+}
+
+i{
+	margin: 0 20px;
+}
+
+#containerDescription{
+	display: none;
+}
+
+.border {
+	border-top: 1px solid grey;
+	width: 100%;
+	margin: 15px 0;
+}
+
+.profil {
+	color: rebeccapurple;
+}
+
+span {
+	font-size: 30px;
+	color: #D3D2D1;
 }
