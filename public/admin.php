@@ -19,4 +19,6 @@ foreach ($message as $valueMessage) {
 }
 ?>
 <h1>ADMIN PAGE</h1>
+
+<p>Felicitation vous etes arrive ennnnnfffffin sur la page admin</p>
 <a href="index.php">Click here to return to home !</a>

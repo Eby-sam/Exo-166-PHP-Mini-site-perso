@@ -7,16 +7,24 @@ la logique pour choisir la page à charger
 */
 
 function getContent() {
-    if(!isset($_GET['page'])){
+    if (!isset($_GET['page'])){
         include __DIR__.'/../pages/home.php';
     }
-    elseif(isset($_GET['page']) && $_GET['page'] == "bio") {
+    elseif (isset($_GET['page']) && $_GET['page'] == "bio") {
 
         include __DIR__.'/../pages/bio.php';
     }
-    elseif(isset($_GET['page']) && $_GET['page'] == "contact") {
+    elseif (isset($_GET['page']) && $_GET['page'] == "contact") {
 
         include __DIR__.'/../pages/contact.php';
+    }
+    elseif (isset($_GET['page']) && $_GET['page'] == "home") {
+
+        include __DIR__.'/../pages/home.php';
+    }
+    elseif (isset($_GET['page']) && $_GET['page'] == "connection") {
+
+        include __DIR__.'/../pages/conect.php';
     }
 }
 
@@ -41,15 +49,6 @@ function getUserData() {
 
 function getPart($name) {
     include __DIR__ . '/../parts/'. $name . '.php';
-}
-
-function issetMandatoryPostValue(string ...$inputNames): bool {
-    foreach ($inputNames as $inputName) {
-        if (!isset($_POST[$inputName])) {
-            return false;
-        }
-    }
-    return true;
 }
 
 define("ERROR", 0);

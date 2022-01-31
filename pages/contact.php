@@ -1,8 +1,3 @@
-<?php
-    if(isset($_GET['success']) && intval($_GET['success']) === 1) { ?>
-        <div>le message a bien ete envoyer !!!</div> <?php
-    }
-?>
 <section>
     <h1>Contact</h1>
     <div id="containerContact">
@@ -26,3 +21,12 @@
     <span>My Email :  kingRoiDuBacAsable69@gmail.com</span>
     <span>My adress : 18 rue de la 58 ruelles a droite de la 7 avenue </span>
 </section>
+
+<?php
+if (isset($_GET['m'])) {
+    if ($_GET['m'] === '0') {
+        echo "<p>Message bien envoyé</p>";
+    } elseif ($_GET['m'] === '1') {
+        echo "<p>Erreur lors de l'envoi du message</p>";
+    }
+}
