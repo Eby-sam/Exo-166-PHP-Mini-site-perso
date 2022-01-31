@@ -27,7 +27,7 @@ function getUserData() {
         if(is_array($key)) {
             foreach ($key as $index2) {
                 echo "<div class='border'></div>";
-                foreach ($index2 as $index3 => $index4) {
+                foreach ($index2 as $index4) {
                     echo "<p>".$index4."</p>";
                 }
             }
@@ -43,6 +43,15 @@ function getPart($name) {
     include __DIR__ . '/../parts/'. $name . '.php';
 }
 
+function issetMandatoryPostValue(string ...$inputNames): bool {
+    foreach ($inputNames as $inputName) {
+        if (!isset($_POST[$inputName])) {
+            return false;
+        }
+    }
+    return true;
+}
+
 define("ERROR", 0);
 define("SUCCESS", 1);
 
@@ -51,7 +60,7 @@ define("SUCCESS", 1);
  * @param $message
  * @param int $type
  */
-function displayMessage ($message, $type=SUCCESS) {
+function displayMessage ($message, int $type=SUCCESS) {
     $message = strip_tags(base64_decode($message));
     if ($message) {
         $class = $type === ERROR ? "error" : "success";

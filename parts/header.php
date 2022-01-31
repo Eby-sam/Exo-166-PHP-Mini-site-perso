@@ -9,14 +9,14 @@
     </head>
     <body>
     <?php
-    if (isset($_GET['e'])) {
-        displayMessage($_GET['e'], ERROR);
-    }
-    elseif (isset($_GET['s'])) {
-        displayMessage($_GET['s']);
-    }
+        if (isset($_GET['e'])) {
+            displayMessage($_GET['e'], ERROR);
+        }
+        elseif (isset($_GET['s'])) {
+            displayMessage($_GET['s']);
+        }
     ?>
     <header>
         <h1>Jane Doe</h1>
-        <?php getPart('menu'); ?>
+        <?php require __DIR__ . '/../parts/menu.php';?>
     </header>
