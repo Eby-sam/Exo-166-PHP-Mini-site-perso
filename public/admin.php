@@ -5,7 +5,7 @@ $_SESSION['username'] = 'sam';
 $_SESSION['password'] = 'Naruto1990';
 
 if ($_POST['name'] !== $_SESSION['name'] || $_POST['password'] !== $_SESSION['password']) {
-    header('Location: /public/index.php?error=5');
+    header('Location: ../public/admin.php');
 }
 
 if (isset($_GET['error'])) {

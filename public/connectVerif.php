@@ -15,10 +15,9 @@ if (isset($_POST['submit'])) {
     $password = strip_tags($_POST['password']);
 
     // is it an admin account
-    if ($username === 'SamSam' && $password === 'Naruto1990') {
+    if ($username === 'sam' && $password === 'Naruto1990') {
         setcookie('admin');
-        header('Location: /admin.php');
-        exit();
+        header('Location: ../public/admin.php');
     }
 
     else {
